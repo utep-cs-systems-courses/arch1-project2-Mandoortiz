@@ -21,7 +21,8 @@
 
   The Blinky Buzzy Toy can be used by pressing the buttons marked s1-s4
   underneath the screen
-   S1: Has the red and green lights under the panel perform a light show
-   S2: Dims the red and green lights
-   S3: Plays the first two bars of Twinkle, Twinkle Little Star.
-   S4: Turns off lights and buzzer
+  
+  * S1: Has the red and green lights under the panel perform a light show
+  * S2: Dims the red and green lights
+  * S3: Plays the first two bars of Twinkle, Twinkle Little Star.
+  * S4: Turns off lights and buzzer
