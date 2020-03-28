@@ -12,7 +12,7 @@ int notes[] = {C1,0,C1,0,G5,0,G5,0,A5,A5,G5,0,F4,F4,E3,E3,D2,D2,C1};
 
 void state_advance()
 {
-  switch(state){
+  switch (state) {
   case 1: // red_green_chacha
     speed = 100;
     buzzer_set_period(0);
@@ -43,54 +43,54 @@ void state_advance()
 void red_green_chacha()
 {
   static char red_green_state = 0;
-  switch(red_green_state){
-    case 0:
-      red_on = 1;
-      green_on = 0;
-      red_green_state = 1;
-      break;
-    case 1:
-      red_on = 0;
-      green_on = 1;
-      red_green_state = 2;
-      break;
-    case 2:
-      red_on = 1;
-      green_on = 1;
-      red_green_state = 3;
-      break;
-    case 3:
-      red_on = 0;
-      green_on = 0;
-      red_green_state = 4;
-      break;
-    case 4:
-      red_on = 1;
-      green_on = 1;
-      red_green_state = 5;
-      break;
-    case 5:
-      red_on = 0;
-      green_on = 0;
-      red_green_state = 6;
-      break;
-    case 6:
-      red_on = 1;
-      green_on = 1;
-      red_green_state = 7;
-      break;
-    case 7:
-      red_on = 0;
-      green_on = 0;
-      red_green_state = 0;
-      break;
+  switch (red_green_state) {
+  case 0:
+    red_on = 1;
+    green_on = 0;
+    red_green_state = 1;
+    break;
+  case 1:
+    red_on = 0;
+    green_on = 1;
+    red_green_state = 2;
+    break;
+  case 2:
+    red_on = 1;
+    green_on = 1;
+    red_green_state = 3;
+    break;
+  case 3:
+    red_on = 0;
+    green_on = 0;
+    red_green_state = 4;
+    break;
+  case 4:
+    red_on = 1;
+    green_on = 1;
+    red_green_state = 5;
+    break;
+  case 5:
+    red_on = 0;
+    green_on = 0;
+    red_green_state = 6;
+    break;
+  case 6:
+    red_on = 1;
+    green_on = 1;
+    red_green_state = 7;
+    break;
+  case 7:
+    red_on = 0;
+    green_on = 0;
+    red_green_state = 0;
+    break;
   }
 }
 
 // Makes lights appear dim.
 void dim_lights(){
   static char dim_green_state = 0;
-  switch(dim_green_state){
+  switch (dim_green_state) {
   case 0:
     red_on = 0; 
     green_on = 0;
@@ -110,12 +110,13 @@ void dim_lights(){
 }
 
 // Used to play song 
-void play_song(){
-  if(note < 19){// If less than length of array play notes.
+void play_song()
+{
+  if (note < 19) { // If less than length of array play notes.
     buzzer_set_period(notes[note]);
     note++;
   }
-  else{// Else turn off buzzer and start over.
+  else { // Else turn off buzzer and start over.
     buzzer_set_period(0);
     note = 0;
   }
