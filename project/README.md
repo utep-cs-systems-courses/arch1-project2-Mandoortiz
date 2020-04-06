@@ -26,3 +26,7 @@
   * S2: Dims the red and green lights
   * S3: Plays the first two bars of Twinkle, Twinkle Little Star.
   * S4: Turns off lights and buzzer
+
+## Errors:
+
+   assembly.s does not run
